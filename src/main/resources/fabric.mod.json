@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "ironjungle",
+  "version": "${version}",
+  "name": "Iron Jungle",
+  "description": "Технологии, джунгли и боссы. Начало: ручная пантера.",
+  "authors": ["Oleksandr"],
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.ironjungle.IronJungle"],
+    "client": ["dev.ironjungle.client.IronJungleClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
