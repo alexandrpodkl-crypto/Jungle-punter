@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": { "item": "minecraft:netherite_upgrade_smithing_template" },
+  "base": { "item": "ironjungle:diamond_panther_armor" },
+  "addition": { "item": "minecraft:netherite_ingot" },
+  "result": { "id": "ironjungle:netherite_panther_armor", "count": 1 }
+}

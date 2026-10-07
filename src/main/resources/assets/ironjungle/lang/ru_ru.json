@@ -1,4 +1,13 @@
 {
   "entity.ironjungle.panther": "Пантера",
-  "item.ironjungle.panther_spawn_egg": "Яйцо призыва пантеры"
+  "item.ironjungle.panther_spawn_egg": "Яйцо призыва пантеры",
+  "item.ironjungle.iron_panther_armor": "Железная броня для пантеры",
+  "item.ironjungle.diamond_panther_armor": "Алмазная броня для пантеры",
+  "item.ironjungle.netherite_panther_armor": "Незеритовая броня для пантеры",
+  "message.ironjungle.panther.tamed": "Пантера приручена! ПКМ пустой рукой: сидеть / за мной",
+  "message.ironjungle.panther.sit": "Пантера сидит",
+  "message.ironjungle.panther.follow": "Пантера идёт за тобой",
+  "message.ironjungle.panther.armor_on": "Броня надета",
+  "message.ironjungle.panther.armor_off": "Броня снята",
+  "message.ironjungle.panther.armor_already": "Броня уже надета. Сними её ножницами"
 }

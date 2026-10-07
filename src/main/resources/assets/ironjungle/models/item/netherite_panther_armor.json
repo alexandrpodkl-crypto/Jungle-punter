@@ -1,0 +1,4 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": { "layer0": "ironjungle:item/netherite_panther_armor" }
+}

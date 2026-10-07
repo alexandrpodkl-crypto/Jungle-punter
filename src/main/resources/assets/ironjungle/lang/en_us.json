@@ -1,4 +1,13 @@
 {
   "entity.ironjungle.panther": "Panther",
-  "item.ironjungle.panther_spawn_egg": "Panther Spawn Egg"
+  "item.ironjungle.panther_spawn_egg": "Panther Spawn Egg",
+  "item.ironjungle.iron_panther_armor": "Iron Panther Armor",
+  "item.ironjungle.diamond_panther_armor": "Diamond Panther Armor",
+  "item.ironjungle.netherite_panther_armor": "Netherite Panther Armor",
+  "message.ironjungle.panther.tamed": "Panther tamed! Right-click with empty hand: sit / follow",
+  "message.ironjungle.panther.sit": "Panther is sitting",
+  "message.ironjungle.panther.follow": "Panther is following you",
+  "message.ironjungle.panther.armor_on": "Armor equipped",
+  "message.ironjungle.panther.armor_off": "Armor removed",
+  "message.ironjungle.panther.armor_already": "Already wearing armor. Remove it with shears"
 }

@@ -1,6 +1,7 @@
 package dev.ironjungle;
 
 import dev.ironjungle.entity.ModEntities;
+import dev.ironjungle.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -16,6 +17,7 @@ public class IronJungle implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItems.register();
 		ModEntities.register();
 		LOGGER.info("Iron Jungle загружен");
 	}

@@ -12,6 +12,7 @@ public class PantherRenderer extends MobEntityRenderer<PantherEntity, PantherMod
 
 	public PantherRenderer(EntityRendererFactory.Context context) {
 		super(context, new PantherModel(context.getPart(PantherModel.LAYER)), 0.6f);
+		this.addFeature(new PantherArmorFeature(this, context.getPart(PantherModel.ARMOR_LAYER)));
 	}
 
 	@Override

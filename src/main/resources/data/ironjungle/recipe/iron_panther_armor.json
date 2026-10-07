@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "  X",
+    "XLX",
+    "X X"
+  ],
+  "key": {
+    "X": { "item": "minecraft:iron_ingot" },
+    "L": { "item": "minecraft:leather" }
+  },
+  "result": { "id": "ironjungle:iron_panther_armor", "count": 1 }
+}

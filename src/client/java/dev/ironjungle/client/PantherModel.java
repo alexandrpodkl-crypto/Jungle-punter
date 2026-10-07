@@ -13,6 +13,7 @@ import net.minecraft.util.math.MathHelper;
  */
 public class PantherModel extends SinglePartEntityModel<PantherEntity> {
 	public static final EntityModelLayer LAYER = new EntityModelLayer(IronJungle.id("panther"), "main");
+	public static final EntityModelLayer ARMOR_LAYER = new EntityModelLayer(IronJungle.id("panther"), "armor");
 
 	private static final float PI = (float) Math.PI;
 
@@ -39,36 +40,45 @@ public class PantherModel extends SinglePartEntityModel<PantherEntity> {
 	}
 
 	public static TexturedModelData getTexturedModelData() {
+		return create(Dilation.NONE);
+	}
+
+	/** Та же модель, но чуть толще: на неё натягивается броня. */
+	public static TexturedModelData getArmorModelData() {
+		return create(new Dilation(0.4f));
+	}
+
+	private static TexturedModelData create(Dilation d) {
 		ModelData data = new ModelData();
 		ModelPartData r = data.getRoot();
 
 		// Туловище 6x6x16
 		r.addChild("body", ModelPartBuilder.create().uv(0, 0)
-				.cuboid(-3f, -3f, -8f, 6f, 6f, 16f), ModelTransform.pivot(0f, 14f, 0f));
+				.cuboid(-3f, -3f, -8f, 6f, 6f, 16f, d), ModelTransform.pivot(0f, 14f, 0f));
 
 		// Голова 6x6x5 + морда + уши
 		r.addChild("head", ModelPartBuilder.create()
-				.uv(0, 22).cuboid(-3f, -3f, -5f, 6f, 6f, 5f)
-				.uv(22, 22).cuboid(-2f, 0f, -7f, 4f, 3f, 2f)
-				.uv(34, 22).cuboid(-3f, -4f, -2f, 1f, 1f, 1f)
-				.uv(38, 22).cuboid(2f, -4f, -2f, 1f, 1f, 1f),
+				.uv(0, 22).cuboid(-3f, -3f, -5f, 6f, 6f, 5f, d)
+				.uv(22, 22).cuboid(-2f, 0f, -7f, 4f, 3f, 2f, d)
+				.uv(34, 22).cuboid(-3f, -4f, -2f, 1f, 1f, 1f, d)
+				.uv(38, 22).cuboid(2f, -4f, -2f, 1f, 1f, 1f, d),
 				ModelTransform.pivot(0f, 12f, -8f));
 
 		// Хвост из двух частей, второй загибается вверх
 		ModelPartData tail = r.addChild("tail", ModelPartBuilder.create().uv(44, 0)
-				.cuboid(-1f, 0f, 0f, 2f, 8f, 2f), ModelTransform.of(0f, 12f, 7f, 0.9f, 0f, 0f));
+				.cuboid(-1f, 0f, 0f, 2f, 8f, 2f, d), ModelTransform.of(0f, 12f, 7f, 0.9f, 0f, 0f));
 		tail.addChild("tail_tip", ModelPartBuilder.create().uv(52, 0)
-				.cuboid(-1f, 0f, 0f, 2f, 7f, 2f), ModelTransform.of(0f, 7.5f, 0f, -0.5f, 0f, 0f));
+				.cuboid(-1f, 0f, 0f, 2f, 7f, 2f, d), ModelTransform.of(0f, 7.5f, 0f, -0.5f, 0f, 0f));
 
 		// Лапы 3x7x3
 		r.addChild("front_left_leg", ModelPartBuilder.create().uv(0, 34)
-				.cuboid(-1.5f, 0f, -1.5f, 3f, 7f, 3f), ModelTransform.pivot(1.9f, 17f, -6f));
+				.cuboid(-1.5f, 0f, -1.5f, 3f, 7f, 3f, d), ModelTransform.pivot(1.9f, 17f, -6f));
 		r.addChild("front_right_leg", ModelPartBuilder.create().uv(12, 34)
-				.cuboid(-1.5f, 0f, -1.5f, 3f, 7f, 3f), ModelTransform.pivot(-1.9f, 17f, -6f));
+				.cuboid(-1.5f, 0f, -1.5f, 3f, 7f, 3f, d), ModelTransform.pivot(-1.9f, 17f, -6f));
 		r.addChild("hind_left_leg", ModelPartBuilder.create().uv(24, 34)
-				.cuboid(-1.5f, 0f, -1.5f, 3f, 7f, 3f), ModelTransform.pivot(1.9f, 17f, 6f));
+				.cuboid(-1.5f, 0f, -1.5f, 3f, 7f, 3f, d), ModelTransform.pivot(1.9f, 17f, 6f));
 		r.addChild("hind_right_leg", ModelPartBuilder.create().uv(36, 34)
-				.cuboid(-1.5f, 0f, -1.5f, 3f, 7f, 3f), ModelTransform.pivot(-1.9f, 17f, 6f));
+				.cuboid(-1.5f, 0f, -1.5f, 3f, 7f, 3f, d), ModelTransform.pivot(-1.9f, 17f, 6f));
 
 		return TexturedModelData.of(data, 64, 64);
 	}

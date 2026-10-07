@@ -9,6 +9,7 @@ public class IronJungleClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		EntityModelLayerRegistry.registerModelLayer(PantherModel.LAYER, PantherModel::getTexturedModelData);
+		EntityModelLayerRegistry.registerModelLayer(PantherModel.ARMOR_LAYER, PantherModel::getArmorModelData);
 		EntityRendererRegistry.register(ModEntities.PANTHER, PantherRenderer::new);
 	}
 }
